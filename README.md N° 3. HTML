@@ -1,0 +1,27 @@
+Crear una página web que muestre 102 Etiquetas HTML
+Mostrar 102 Etiquetas HTML, conforme a la siguiente estructura.
+
+Número (Secuencial)
+
+Nombre de la Etiqueta
+
+Descripción (que significa, que hace) 
+
+Ejemplo de cómo usar (escriba un ejemplo de como se usa la etiqueta)
+
+Cualquier elemento adicional (cualquier componente que quieran agregar) con respecto a la etiqueta es válido.
+
+Formato de presentación : Libre.
+
+Ejemplo (Puede agregar más datos)
+
+
+Nombre de la Etiqueta	Descripción	Ejemplo de Uso	Elemento Adicional
+<a>	Define un hipervínculo. Se utiliza para enlazar una página a otra o un recurso.	<a href="https://www.example.com">Visita Ejemplo</a>
+Este ejemplo crea un enlace que dirige a "https://www.example.com".	Se puede agregar el atributo target="_blank" para abrir el enlace en una nueva pestaña.
+<p>	Define un párrafo de texto.	<p>Este es un párrafo.</p>	Puede contener otros elementos en línea como <a>, <strong>, <em>.
+<img>	Incrusta una imagen en la página.	<img src="imagen.jpg" alt="Descripción de la imagen">	Importante incluir el atributo alt para accesibilidad.
+<div>	Define una sección o contenedor en el documento.	<div>Contenido del div</div>	Usualmente usado para aplicar estilos o agrupar otros elementos.
+<h1>	Define el encabezado más importante en la página.	<h1>Este es un Encabezado</h1>	Los encabezados van desde <h1> (más importante) hasta <h6> (menos importante).
+............
+............
