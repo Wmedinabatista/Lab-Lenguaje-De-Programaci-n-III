@@ -1,0 +1,139 @@
+{
+
+"menu": [
+
+{
+
+"id": "home",
+"nombre": "Inicio",
+"enlace": "#inicio",
+"icono": "⌂"
+
+},
+    
+{
+    
+"id": "games",
+"nombre": "Videojuegos",
+"enlace": "#videojuegos",
+"icono": "🎮",
+"submenu": [
+        
+{
+          
+"id": "action",
+"nombre": "Acción",
+"enlace": "#videojuegos",
+"icono": "⚔️"
+        
+},
+        
+{
+          
+"id": "adventure",
+"nombre": "Aventura",
+"enlace": "#videojuegos",
+"icono": "🧭"
+        
+},
+        
+{
+        
+"id": "sports",
+"nombre": "Deportes",
+"enlace": "#videojuegos",
+"icono": "🏆"
+        
+},
+        
+{
+          
+"id": "racing",
+"nombre": "Carreras",
+"enlace": "#videojuegos",
+"icono": "🏎️"
+        
+}
+      
+]
+    
+},
+    
+{
+      
+"id": "platforms",
+"nombre": "Plataformas",
+"enlace": "#videojuegos",
+"icono": "🕹️",
+"submenu": [
+        
+{
+    
+"id": "pc",
+"nombre": "PC",
+"enlace": "#videojuegos",
+"icono": "💻"
+        
+},
+        
+{
+        
+"id": "playstation",
+"nombre": "PlayStation",
+"enlace": "#videojuegos",
+"icono": "🎮"
+        
+},
+        
+{
+    
+"id": "xbox",
+"nombre": "Xbox",
+"enlace": "#videojuegos",
+"icono": "🟩"
+        
+},
+        
+{
+          
+"id": "nintendo",
+"nombre": "Nintendo",
+"enlace": "#videojuegos",
+"icono": "🔴"
+        
+}
+      
+]
+    
+},
+    
+{
+      
+"id": "news",
+"nombre": "Novedades",
+"enlace": "#novedades",
+"icono": "✦"
+    
+},
+    
+{
+      
+"id": "community",
+"nombre": "Comunidad",
+"enlace": "#acerca",
+"icono": "◉"
+    
+},
+    
+{
+  
+"id": "about",
+"nombre": "Acerca de",
+"enlace": "#acerca",
+"icono": "ⓘ"
+    
+}
+  
+]
+
+}
