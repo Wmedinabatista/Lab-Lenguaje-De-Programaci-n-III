@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameVault | Tienda de videojuegos</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="#" aria-label="GameVault inicio"><span class="brand-mark">G</span> GameVault</a>
+<nav aria-label="Navegación principal">
+<a href="#catalogo">Catálogo</a>
+<a href="#ofertas">Ofertas</a>
+</nav>
+<button class="cart-button" id="cart-button" type="button" aria-label="Ver carrito">
+🛒 Carrito <span id="cart-count">0</span>
+</button>
+</header>
+
+<main>
+<section class="hero">
+<div class="hero-copy">
+<p class="eyebrow">TU PRÓXIMA AVENTURA EMPIEZA AQUÍ</p>
+<h1>Sube de nivel.<br><span>Encuentra tu próximo juego.</span></h1>
+<p class="hero-description">Descubre títulos destacados para tu colección y prepárate para jugar.</p>
+<a class="primary-link" href="#catalogo">Explorar catálogo <span>→</span></a>
+</div>
+<div class="hero-art" aria-hidden="true">
+<div class="orbit orbit-one"></div>
+<div class="orbit orbit-two"></div>
+<div class="game-controller">🎮</div>
+<span class="floating-tag tag-one">PLAY</span>
+<span class="floating-tag tag-two">LEVEL UP</span>
+</div>
+</section>
+
+<section class="catalog-section" id="catalogo">
+<div class="section-heading">
+<div>
+<p class="eyebrow">SELECCIÓN GAMEVAULT</p>
+<h2>Videojuegos destacados</h2>
+</div>
+<p class="section-note">Elige tu próxima aventura</p>
+</div>
+
+<div class="filters" role="group" aria-label="Filtrar catálogo">
+<button class="filter active" data-filter="Todos" type="button">Todos</button>
+<button class="filter" data-filter="Aventura" type="button">Aventura</button>
+<button class="filter" data-filter="Deportes" type="button">Deportes</button>
+<button class="filter" data-filter="Acción" type="button">Acción</button>
+</div>
+
+<div class="game-grid" id="game-grid">
+<article class="game-card" data-game-id="shadow-quest" data-category="Aventura">
+<div class="cover cover-purple"><span class="cover-symbol">✦</span><span class="cover-title">SHADOW<br>QUEST</span><span class="cover-subtitle">THE LOST KINGDOM</span></div>
+<div class="game-info">
+<div class="game-meta"><span>Aventura</span><span class="platform">PC</span></div>
+<h3>Shadow Quest</h3>
+<p class="game-description">Explora ruinas antiguas y descubre un reino olvidado.</p>
+<div class="purchase-row"><strong>US$ 39.99</strong><button class="add-button" data-add="shadow-quest" type="button">Añadir +</button></div>
+</div>
+</article>
+
+<article class="game-card" data-game-id="street-rivals" data-category="Deportes">
+<div class="cover cover-orange"><span class="cover-symbol">⚡</span><span class="cover-title">STREET<br>RIVALS</span><span class="cover-subtitle">OWN THE COURT</span></div>
+<div class="game-info">
+<div class="game-meta"><span>Deportes</span><span class="platform">PS5</span></div>
+<h3>Street Rivals</h3>
+<p class="game-description">Compite, domina la cancha y llega a la cima.</p>
+<div class="purchase-row"><strong>US$ 49.99</strong><button class="add-button" data-add="street-rivals" type="button">Añadir +</button></div>
+</div>
+</article>
+
+<article class="game-card" data-game-id="neon-strike" data-category="Acción">
+<div class="cover cover-blue"><span class="cover-symbol">◈</span><span class="cover-title">NEON<br>STRIKE</span><span class="cover-subtitle">FUTURE IS NOW</span></div>
+<div class="game-info">
+<div class="game-meta"><span>Acción</span><span class="platform">Xbox</span></div>
+<h3>Neon Strike</h3>
+<p class="game-description">Enfréntate a una ciudad futurista llena de desafíos.</p>
+<div class="purchase-row"><strong>US$ 59.99</strong><button class="add-button" data-add="neon-strike" type="button">Añadir +</button></div>
+</div>
+</article>
+
+<article class="game-card" data-game-id="galaxy-drift" data-category="Acción">
+<div class="cover cover-green"><span class="cover-symbol">✧</span><span class="cover-title">GALAXY<br>DRIFT</span><span class="cover-subtitle">BEYOND THE STARS</span></div>
+<div class="game-info">
+<div class="game-meta"><span>Acción</span><span class="platform">PC</span></div>
+<h3>Galaxy Drift</h3>
+<p class="game-description">Pilota por galaxias desconocidas a máxima velocidad.</p>
+<div class="purchase-row"><strong>US$ 29.99</strong><button class="add-button" data-add="galaxy-drift" type="button">Añadir +</button></div>
+</div>
+</article>
+
+<article class="game-card" data-game-id="mystic-valley" data-category="Aventura">
+<div class="cover cover-pink"><span class="cover-symbol">☾</span><span class="cover-title">MYSTIC<br>VALLEY</span><span class="cover-subtitle">A TALE UNFOLDS</span></div>
+<div class="game-info">
+<div class="game-meta"><span>Aventura</span><span class="platform">Switch</span></div>
+<h3>Mystic Valley</h3>
+<p class="game-description">Resuelve misterios en un valle lleno de magia.</p>
+<div class="purchase-row"><strong>US$ 34.99</strong><button class="add-button" data-add="mystic-valley" type="button">Añadir +</button></div>
+</div>
+</article>
+
+<article class="game-card" data-game-id="turbo-league" data-category="Deportes">
+<div class="cover cover-red"><span class="cover-symbol">🏁</span><span class="cover-title">TURBO<br>LEAGUE</span><span class="cover-subtitle">RACE TO WIN</span></div>
+<div class="game-info">
+<div class="game-meta"><span>Deportes</span><span class="platform">Xbox</span></div>
+<h3>Turbo League</h3>
+<p class="game-description">Acelera, adelanta rivales y conquista el campeonato.</p>
+<div class="purchase-row"><strong>US$ 44.99</strong><button class="add-button" data-add="turbo-league" type="button">Añadir +</button></div>
+</div>
+</article>
+</div>
+<p class="empty-filter" id="empty-filter" hidden>No hay juegos en esta categoría.</p>
+</section>
+
+<section class="cart-panel" id="cart-panel" aria-live="polite">
+<div class="cart-panel-heading">
+<div><p class="eyebrow">TU SELECCIÓN</p><h2>Carrito de compras</h2></div>
+<button id="close-cart" class="close-button" type="button" aria-label="Cerrar carrito">×</button>
+</div>
+<p id="cart-message" class="cart-message">Tu carrito está vacío.</p>
+<ul id="cart-items" class="cart-items"></ul>
+<div class="cart-total"><span>Total</span><strong id="cart-total">US$ 0.00</strong></div>
+<button id="checkout-button" class="checkout-button" type="button" disabled>Continuar compra</button>
+</section>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</main>
+
+<footer><a class="brand footer-brand" href="#"><span class="brand-mark">G</span> GameVault</a><p>Tu próxima aventura está a un clic.</p><span>© 2026 GameVault</span></footer>
+<script src="app.js"></script>
+</body>
+</html>
