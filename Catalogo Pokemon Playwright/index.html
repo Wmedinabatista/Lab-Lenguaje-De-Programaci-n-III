@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Catálogo de Pokémon con búsqueda y pruebas automatizadas de UI y API.">
+<title>Pokédex | Catálogo Pokémon</title>
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="#inicio" aria-label="Inicio Pokédex">
+<span class="brand-ball" aria-hidden="true">●</span>
+<span>POKÉDEX</span>
+</a>
+<nav aria-label="Navegación principal">
+<a href="#inicio">Inicio</a>
+<a href="#catalogo">Catálogo</a>
+<a href="#acerca">Acerca de</a>
+</nav>
+</header>
+
+<main id="inicio">
+<section class="hero">
+<div class="hero-copy">
+<p class="eyebrow">EXPLORA · DESCUBRE · COLECCIONA</p>
+<h1>Tu próxima aventura<br><span>comienza aquí.</span></h1>
+<p class="hero-text">Descubre Pokémon, consulta sus tipos y encuentra a tus favoritos en esta Pokédex interactiva.</p>
+<a class="primary-button" href="#catalogo">Explorar catálogo <span aria-hidden="true">→</span></a>
+</div>
+<div class="hero-art" aria-hidden="true">
+<div class="orbit orbit-one"></div>
+<div class="orbit orbit-two"></div>
+<div class="hero-pokeball"><span></span></div>
+<div class="spark spark-one">✦</div>
+<div class="spark spark-two">✧</div>
+</div>
+</section>
+
+<section class="catalog-section" id="catalogo">
+<div class="section-heading">
+<div>
+<p class="eyebrow">BASE DE DATOS POKÉMON</p>
+<h2>Explora el catálogo</h2>
+<p class="muted">Busca un Pokémon por su nombre y selecciona una tarjeta para ver más información.</p>
+</div>
+<span class="catalog-count" id="catalog-count">Cargando catálogo…</span>
+</div>
+
+<form class="search-form" id="search-form" role="search">
+<label class="sr-only" for="pokemon-search">Buscar Pokémon por nombre</label>
+<span class="search-icon" aria-hidden="true">⌕</span>
+<input id="pokemon-search" name="pokemon" type="search" placeholder="Ej.: pikachu, charizard…" autocomplete="off">
+<button type="submit" class="search-button">Buscar</button>
+<button type="button" id="clear-search" class="clear-button">Limpiar</button>
+</form>
+
+<p id="status-message" class="status-message" role="status" aria-live="polite">Cargando Pokémon…</p>
+<div id="pokemon-grid" class="pokemon-grid" aria-label="Resultados de Pokémon"></div>
+<div class="load-more-wrap">
+<button id="load-more" class="secondary-button" type="button">Cargar más Pokémon</button>
+</div>
+</section>
+
+<section class="about-section" id="acerca">
+<div class="about-icon" aria-hidden="true">◎</div>
+<div>
+<p class="eyebrow">SOBRE ESTE PROYECTO</p>
+<h2>Una Pokédex para explorar</h2>
+<p>Esta aplicación utiliza PokéAPI para consultar datos públicos de Pokémon. También sirve como proyecto práctico para demostrar pruebas automatizadas de interfaz de usuario y API con Playwright.</p>
+</div>
+</section>
+</main>
+
+<footer>
+<span>POKÉDEX · Proyecto académico de pruebas automatizadas</span>
+<span>Datos proporcionados por PokéAPI</span>
+</footer>
+
+<dialog id="pokemon-dialog" class="pokemon-dialog" aria-labelledby="dialog-name">
+<button class="dialog-close" id="dialog-close" aria-label="Cerrar detalles" type="button">×</button>
+<div id="dialog-content"></div>
+</dialog>
+</body>
+</html>
