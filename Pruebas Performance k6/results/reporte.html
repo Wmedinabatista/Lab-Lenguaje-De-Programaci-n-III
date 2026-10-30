@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reporte de pruebas de performance</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:900px;margin:40px auto;padding:0 18px;color:#202124}
+h1{color:#174ea6}table{border-collapse:collapse;width:100%;margin:20px 0}
+th,td{border:1px solid #d0d7de;padding:10px;text-align:left}
+th{background:#f3f6fa}small{color:#5f6368}
+</style>
+</head>
+<body>
+<h1>Reporte de pruebas de performance con k6</h1>
+<p><strong>API evaluada:</strong> https://jsonplaceholder.typicode.com</p>
+<p><strong>Fecha de generación:</strong> 2026-10-30T02:16:39.446Z</p>
+<p>Este reporte se genera automáticamente al ejecutar el script. Utiliza únicamente métricas de esa ejecución.</p>
+<table>
+<thead><tr><th>Métrica</th><th>Resultado</th></tr></thead>
+<tbody>
+<tr><td>Solicitudes HTTP totales</td><td>230</td></tr>
+<tr><td>Solicitudes por segundo</td><td>7.62</td></tr>
+<tr><td>Porcentaje de solicitudes fallidas</td><td>0.00%</td></tr>
+<tr><td>Tiempo medio de respuesta</td><td>57.26 ms</td></tr>
+<tr><td>Tiempo mínimo de respuesta</td><td>48.02 ms</td></tr>
+<tr><td>Tiempo máximo de respuesta</td><td>106.12 ms</td></tr>
+<tr><td>Percentil 95 (p95)</td><td>68.80 ms</td></tr>
+<tr><td>Porcentaje de checks correctos</td><td>100.00%</td></tr>
+<tr><td>Iteraciones completadas</td><td>115</td></tr>
+<tr><td>Máximo de usuarios virtuales</td><td>5</td></tr>
+</tbody></table>
+<h2>Interpretación</h2>
+<p>Compara el resultado del p95 con el objetivo configurado de 1500 ms y la tasa de errores con el objetivo inferior al 1%. Si los umbrales no se cumplen, revisa la conectividad, el estado del servicio y las métricas completas de k6. Una prueba contra una API pública refleja las condiciones de esa ejecución y no demuestra por sí sola el rendimiento de una aplicación propia.</p>
+<small>Generado por tests/performance.js mediante k6 handleSummary().</small>
+</body></html>

@@ -1,0 +1,19 @@
+{
+"generated_at": "2026-10-30T02:16:39.446Z",
+"target": "https://jsonplaceholder.typicode.com",
+"note": "Resultados generados por la ejecución real de k6; no son datos de ejemplo.",
+"metrics": {
+"total_http_requests": 230,
+"requests_per_second": 7.62363485642266,
+"failed_request_rate": 0,
+"response_time_avg_ms": 57.25657869565218,
+"response_time_min_ms": 48.0213,
+"response_time_max_ms": 106.1207,
+"response_time_p95_ms": 68.795785,
+"checks_passed_rate": 1,
+"iterations": 115,
+"virtual_users_max": 5
+
+}
+
+}
