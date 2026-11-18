@@ -1,0 +1,190 @@
+Validador de Cédula Dominicana
+
+1. Descripción del proyecto
+
+Este proyecto consiste en desarrollar un servicio web que permite validar números de cédula de identidad y electoral de la República Dominicana utilizando el algoritmo módulo 10.
+
+La aplicación recibe un número de cédula, realiza las operaciones matemáticas correspondientes y comprueba si el último dígito coincide con el resultado obtenido. Finalmente, devuelve un mensaje indicando si la cédula es válida o inválida según el algoritmo.
+
+Es importante señalar que esta validación comprueba el dígito de control, pero no confirma si la cédula existe oficialmente en los registros de la Junta Central Electoral (JCE).
+
+2. Objetivo del proyecto
+
+El objetivo principal es crear un servicio web que permita comprobar si una cédula dominicana cumple con las condiciones establecidas por el algoritmo módulo 10.
+
+Para lograrlo, el sistema debe:
+
+Recibir un número de cédula dominicana.
+
+Comprobar que tenga los 11 dígitos correspondientes.
+
+Aplicar el algoritmo módulo 10.
+
+Comparar el dígito verificador calculado con el último dígito de la cédula.
+
+Mostrar un mensaje indicando si la cédula es válida o inválida.
+
+3. Tecnologías utilizadas
+
+Para desarrollar este proyecto se utilizaron las siguientes tecnologías:
+
+Lenguaje de programación: C#.
+
+Framework: ASP.NET Core 9.
+
+Entorno de desarrollo: Visual Studio Code.
+
+Tipo de aplicación: Servicio Web API.
+
+4. Estructura del proyecto
+
+El proyecto está organizado en diferentes carpetas y archivos, cada uno con una función específica.
+
+ValidadorCedulaRD/
+│
+├── Controllers/
+│   ├── CedulaController.cs
+│   └── WeatherForecastController.cs
+│
+├── Properties/
+│   └── launchSettings.json
+│
+├── Services/
+│   └── CedulaValidator.cs
+│
+├── Program.cs
+├── appsettings.json
+├── appsettings.Development.json
+└── ValidadorCedulaRD.csproj
+
+Función de los archivos principales
+
+CedulaValidator.cs: contiene el algoritmo encargado de realizar los cálculos necesarios para comprobar si una cédula cumple con el módulo 10.
+
+CedulaController.cs: recibe el número de cédula mediante una solicitud web, utiliza la clase de validación y devuelve el resultado.
+
+Program.cs: contiene la configuración principal de la aplicación y registra el servicio que realiza la validación.
+
+ValidadorCedulaRD.csproj: contiene la información y configuración necesaria para ejecutar el proyecto.
+
+launchSettings.json: contiene los parámetros utilizados para iniciar la aplicación durante el desarrollo.
+
+5. Funcionamiento del algoritmo módulo 10
+
+El algoritmo módulo 10 permite comprobar el dígito verificador de una cédula mediante una serie de operaciones matemáticas.
+
+El procedimiento realizado por el sistema es el siguiente:
+
+Primero, elimina los guiones y los espacios exteriores del número introducido.
+
+Comprueba que la cédula tenga exactamente 11 dígitos y que todos sean números.
+
+Toma los primeros 10 dígitos para realizar el cálculo.
+
+Multiplica los dígitos alternadamente por 1 y por 2, comenzando desde la izquierda con el multiplicador 1.
+
+Cuando el resultado de una multiplicación tiene dos cifras, se suman ambas cifras.
+
+Se suman todos los resultados obtenidos.
+
+Se calcula el dígito verificador esperado utilizando la operación módulo 10.
+
+Finalmente, se compara el resultado con el último dígito de la cédula.
+
+Si ambos dígitos coinciden, el sistema indica que la cédula es válida según el algoritmo. Si no coinciden, indica que es inválida.
+
+6. Funcionamiento del servicio web
+
+El servicio web utiliza un controlador que recibe las solicitudes mediante el método HTTP POST.
+
+La dirección del servicio utilizado durante las pruebas fue:
+
+http://localhost:5031/api/cedula/validar
+
+El sistema recibe la información en formato JSON, procesa el número de cédula y devuelve una respuesta con tres datos:
+
+cedula: número que se desea validar.
+
+valida: resultado de la comprobación, verdadero o falso.
+
+mensaje: explicación del resultado obtenido.
+
+Ejemplo de una solicitud
+
+{
+  "cedula": "00112345673"
+}
+
+El número utilizado es ficticio y sirve únicamente como ejemplo de comprobación matemática.
+
+Ejemplo de respuesta cuando la cédula es válida
+
+{
+  "cedula": "00112345673",
+  "valida": true,
+  "mensaje": "La cédula es válida."
+}
+
+Ejemplo de respuesta cuando la cédula es inválida
+
+{
+  "cedula": "00112345674",
+  "valida": false,
+  "mensaje": "La cédula es inválida."
+}
+
+7. Pasos para ejecutar el proyecto
+
+Para ejecutar el servicio web desde Visual Studio Code se deben seguir estos pasos:
+
+Primer paso: abrir la carpeta del proyecto ValidadorCedulaRD en Visual Studio Code.
+
+Segundo paso: abrir una terminal y comprobar que se encuentra dentro de la carpeta donde está el archivo del proyecto.
+
+Tercer paso: ejecutar el siguiente comando para compilar:
+
+dotnet build
+
+Cuarto paso: iniciar el servicio web utilizando:
+
+dotnet run
+
+Quinto paso: comprobar en la terminal la dirección local donde se encuentra funcionando el servicio.
+
+Sexto paso: enviar una solicitud POST al endpoint de validación para introducir una cédula y recibir el resultado.
+
+8. Pruebas realizadas
+
+Durante el desarrollo se realizaron diferentes pruebas para comprobar que el servicio funcionara correctamente.
+
+Prueba
+
+Resultado
+
+Número ficticio que cumple el cálculo del módulo 10
+
+Cédula válida
+
+Número ficticio que no cumple el cálculo
+
+Cédula inválida
+
+Número con menos de 11 dígitos
+
+Cédula inválida
+
+Número que contiene letras
+
+Cédula inválida
+
+También se comprobó que el proyecto pudiera compilarse y ejecutarse correctamente.
+
+La compilación final mediante dotnet build terminó satisfactoriamente y no presentó errores.
+
+9. Conclusión
+
+Con el desarrollo de este proyecto se logró crear un servicio web capaz de validar números de cédula dominicanos mediante el algoritmo módulo 10.
+
+La aplicación recibe el número, realiza los cálculos correspondientes y devuelve un mensaje indicando si cumple o no con la validación.
+
+Además, durante su desarrollo se utilizaron herramientas de programación como C#, ASP.NET Core 9 y Visual Studio Code, permitiendo poner en práctica los conocimientos relacionados con la creación y funcionamiento de servicios web.
