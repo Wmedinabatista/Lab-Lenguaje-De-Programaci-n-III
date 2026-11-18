@@ -1,7 +1,0 @@
-com\sistemacontactos\BaseDatos.class
-com\sistemacontactos\App.class
-com\sistemacontactos\vista\FormularioContactos$1.class
-com\sistemacontactos\modelo\Contacto.class
-com\sistemacontactos\dao\ContactoDAO.class
-com\sistemacontactos\vista\FormularioContactos.class
-com\sistemacontactos\Conexion.class
