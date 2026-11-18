@@ -1,0 +1,16 @@
+Crear un Formulario con Acceso a BD
+Crear un formulario con acceso a una base de datos relacional o NoSQL. El formulario debe permitir insertar registros, modificar registros, borrar registros y consultar registros.
+
+Requisitos:
+
+1.- El formulario debe permitir insertar nuevos registros.
+
+2.- El formulario debe permitir modificar registros existentes.
+
+3.- El formulario debe permitir borrar registros.
+
+4.- El formulario debe permitir consultar registros guardados.
+
+5.- Pueden utilizar el lenguaje de programación de su preferencia.
+
+6.- Pueden utilizar el manejador de base de datos de su preferencia: MySQL, MariaDB, SQL Server, Oracle, PostgreSQL, SQLite, MongoDB, Firebase, entre otros.
